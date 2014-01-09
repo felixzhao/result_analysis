@@ -1,0 +1,5 @@
+Noise Size & Beam Search & Base Line
+# & 117 & 84
+3 & 222 & 84
+2 & 431 & 84
+1 & 678 & 84
