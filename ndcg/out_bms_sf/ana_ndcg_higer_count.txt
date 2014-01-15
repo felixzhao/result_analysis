@@ -1,0 +1,5 @@
+Beam Width & Beam Search Higher & Base Line Higher & Equals
+# & 109 & 73 & 1413
+3 & 211 & 71 & 1313
+2 & 421 & 65 & 1109
+1 & 664 & 59 & 872
