@@ -62,6 +62,7 @@ def higer_count(bms_dict, bl_dict, idcg):
         
 if __name__ == '__main__':
 
+    bw = '20'
     noise_size_list = ['#',3,2,1]
     idcg = 1595
     out_file_sum_ndcg = open('out_bms_sf/ana_sum_ndcg.txt','w')
@@ -70,11 +71,11 @@ if __name__ == '__main__':
     print >> out_file_ndcg_higer_count, 'Beam Width & Beam Search Higher & Base Line Higher & Equals'
     for  ns  in noise_size_list:
         if ns == '#':
-            baseline = '../baseline/baseline_result_33per_10width.txt'
-            beamsearch = '../updated/updated_out.bw10.ns0.sfw0.type33.txt'
+            baseline = '../baseline/baseline_result_33per_'+ bw +'width.txt'
+            beamsearch = '../updated/updated_out.bw'+ bw +'.ns0.sfw0.type33.txt'
         else:
-            baseline = '../baseline/baseline_result_33per_10width.txt'
-            beamsearch = '../updated/updated_out.bw10.ns'+ str(ns) +'.sfw10.type33.txt'
+            baseline = '../baseline/baseline_result_33per_'+ bw +'width.txt'
+            beamsearch = '../updated/updated_out.bw'+ bw +'.ns'+ str(ns) +'.sfw10.type33.txt'
         baseline_dict = GetDataDict(baseline)
         beamsearch_dict = GetDataDict(beamsearch)
         '''

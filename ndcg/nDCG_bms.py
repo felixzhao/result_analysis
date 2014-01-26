@@ -62,13 +62,12 @@ def higer_count(bms_dict, bl_dict, idcg):
         
 if __name__ == '__main__':
 
-    beam_width_list = [3,5,10,15,20,25]
     idcg = 1595
     out_file_sum_ndcg = open('out_bms/ana_sum_ndcg.txt','w')
     out_file_ndcg_higer_count = open('out_bms/ana_ndcg_higer_count.txt','w')
     print >> out_file_sum_ndcg, 'Beam Width & Beam Search & Base Line'
     print >> out_file_ndcg_higer_count, 'Beam Width & Beam Search Higher & Base Line Higher & Equals'
-    for bw in beam_width_list:
+    for bw in xrange(5,55,5):
         baseline = '../baseline/baseline_result_33per_' + str(bw) + 'width.txt'
         beamsearch = '../updated/updated_out.bw' + str(bw) + '.ns0.sfw0.type33.txt'
         baseline_dict = GetDataDict(baseline)
